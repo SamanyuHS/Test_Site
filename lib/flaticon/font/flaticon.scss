@@ -1,5 +1,7 @@
+$flaticon-font: "flaticon";
+
 @font-face {
-    font-family: "flaticon";
+    font-family: $flaticon-font;
     src: url("./flaticon.ttf?5d3955cdffc7c6d69b39b4046d7165b5") format("truetype"),
 url("./flaticon.woff?5d3955cdffc7c6d69b39b4046d7165b5") format("woff"),
 url("./flaticon.woff2?5d3955cdffc7c6d69b39b4046d7165b5") format("woff2"),
@@ -18,24 +20,34 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
+$flaticon-map: (
+    "artist": "\f101",
+    "clapperboard": "\f102",
+    "film": "\f103",
+    "video-camera": "\f104",
+    "film-1": "\f105",
+    "film-reel": "\f106",
+    "audience": "\f107",
+);
+
 .flaticon-artist:before {
-    content: "\f101";
+    content: map-get($flaticon-map, "artist");
 }
 .flaticon-clapperboard:before {
-    content: "\f102";
+    content: map-get($flaticon-map, "clapperboard");
 }
 .flaticon-film:before {
-    content: "\f103";
+    content: map-get($flaticon-map, "film");
 }
 .flaticon-video-camera:before {
-    content: "\f104";
+    content: map-get($flaticon-map, "video-camera");
 }
 .flaticon-film-1:before {
-    content: "\f105";
+    content: map-get($flaticon-map, "film-1");
 }
 .flaticon-film-reel:before {
-    content: "\f106";
+    content: map-get($flaticon-map, "film-reel");
 }
 .flaticon-audience:before {
-    content: "\f107";
+    content: map-get($flaticon-map, "audience");
 }
